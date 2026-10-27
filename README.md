@@ -153,10 +153,6 @@ skill-lens/
 - Personal-version maintenance is assisted on request. Automatic upstream synchronization and performance benchmarking are not implemented.
 - Check applicable licenses before copying or redistributing text or code from another skill.
 
-## Acknowledgments
-
-The staged workflow and emphasis on explicit limitations were inspired by [huashu-nuwa](https://github.com/alchaincyf/nuwa-skill). Skill Lens independently applies those ideas to finding, comparing, and adapting agent skills.
-
 ## License
 
 [MIT](LICENSE)
