@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Skill Lens · Comparison Report</title>
+<style>
+:root{font-family:Inter,"Segoe UI","Microsoft YaHei",sans-serif;color-scheme:light dark;--bg:light-dark(#f5f5fa,#11131a);--surface:light-dark(#fff,#1c1f29);--text:light-dark(#252638,#f3f2fb);--muted:light-dark(#6f7188,#b6b5ca);--line:light-dark(#e8e7f0,#383a4a);--purple:light-dark(#6e56cf,#bcacff);--soft:light-dark(#f0ecff,#302a49);--green:light-dark(#177b61,#8bdbbd);--green-bg:light-dark(#eaf8f1,#233c34);--amber:light-dark(#9a6917,#edc987);--amber-bg:light-dark(#fff5e5,#403629)}
+*[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}.shell{max-width:1450px;margin:auto;padding:0 36px 52px}.bar{height:74px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}.logo{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--purple);color:light-dark(#fff,#1e1739);font-size:17px}.brand{font-weight:700;letter-spacing:-.04em;font-size:18px}.bar-note{font-size:12px;color:var(--muted);margin-left:6px}.top{padding:46px 0 28px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:700;color:var(--purple);margin-bottom:12px}h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.045em;line-height:1.2;margin:0 0 9px}p{margin:0}.subtitle{color:var(--muted);font-size:14px}.brief{display:flex;gap:20px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);padding:20px 22px;border-radius:16px}.brief-label{min-width:82px;color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.04em}.brief-content{font-size:14px;line-height:1.7}.conclusion{border-left:3px solid var(--purple);margin:20px 0 32px;padding:2px 0 2px 14px;font-size:14px;line-height:1.7}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:15px}.section-head h2{font-size:19px;margin:0;letter-spacing:-.02em}.section-hint{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;align-items:start}.skill{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 35px light-dark(#26203008,#00000018)}.skill.featured{border-color:var(--purple);box-shadow:0 8px 35px light-dark(#6e56cf16,#00000025)}.card-head{padding:22px 22px 18px;border-bottom:1px solid var(--line);min-height:130px}.badge{font-size:11px;color:var(--purple);background:var(--soft);padding:4px 8px;border-radius:6px;display:inline-block;min-height:24px}.skill h3{font-size:19px;margin:12px 0 3px;letter-spacing:-.03em}.tagline{font-size:13px;color:var(--muted)}.rows{padding:0 22px}.row{padding:16px 0;border-bottom:1px solid var(--line)}.row-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.label{font-size:12px;color:var(--muted)}.status{font-size:11px;border-radius:5px;padding:3px 7px;background:var(--soft);color:var(--purple);white-space:nowrap}.status.positive{color:var(--green);background:var(--green-bg)}.status.caution{color:var(--amber);background:var(--amber-bg)}.value{font-size:14px;font-weight:600;margin-top:6px;line-height:1.55}details{margin-top:8px}summary{font-size:12px;color:var(--purple);cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:' +'}details[open] summary:after{content:' −'}.evidence{font-size:12px;line-height:1.7;color:var(--muted);margin:9px 0 0;padding:10px 12px;background:var(--bg);border-radius:8px;overflow-wrap:anywhere;white-space:pre-wrap}.note{font-size:12px;color:var(--muted);padding:16px 22px 20px;line-height:1.65}.footer{font-size:12px;color:var(--muted);line-height:1.7;margin-top:25px}.empty{display:none}@media(max-width:650px){.shell{padding:0 18px 35px}.top{padding:32px 0 24px}.brief{display:block}.brief-label{margin-bottom:5px}.card-head{min-height:0}.section-head{align-items:start;flex-direction:column}.bar-note{display:none}}
+/* Readable report typography */
+.bar-note,.eyebrow{font-size:13px}
+.subtitle,.brief-content,.conclusion{font-size:16px}
+.brief-label,.section-hint,.label,summary,.evidence,.note,.footer{font-size:14px}
+.badge,.status{font-size:13px}
+.status{white-space:normal;text-align:right}
+.tagline{font-size:15px}
+.value{font-size:16px;line-height:1.65}
+.skill h3{font-size:21px}
+.section-head h2{font-size:21px}
+@media(max-width:650px){.row-head{align-items:flex-start}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="bar"><span class="logo" aria-hidden="true">✳</span><span class="brand">Skill Lens</span><span class="bar-note">Understand before you choose</span></header>
+  <main><section class="top"><div class="eyebrow">Comparison report</div><h1 id="title"></h1><p class="subtitle" id="subtitle"></p></section>
+  <section class="brief" id="brief"><div class="brief-label">Your needs</div><p class="brief-content" id="requirement"></p></section>
+  <div class="conclusion" id="conclusion"></div>
+  <div class="section-head"><h2>Compare candidates</h2><span class="section-hint">Expand each item to see the evidence</span></div>
+  <section class="grid" id="cards" aria-label="Skill candidate comparison"></section><p class="footer" id="footer"></p></main>
+</div>
+<script type="application/json" id="report-data">__SKILL_LENS_REPORT_DATA__</script>
+<script>
+(()=>{const data=JSON.parse(document.getElementById('report-data').textContent);const byId=id=>document.getElementById(id);const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text)node.textContent=text;return node};document.title=data.title+' · Skill Lens';byId('title').textContent=data.title;byId('subtitle').textContent=data.subtitle||'';byId('requirement').textContent=data.requirement||'';byId('brief').hidden=!data.requirement;byId('conclusion').textContent=data.conclusion||'';byId('conclusion').hidden=!data.conclusion;byId('footer').textContent=data.footer||'';const cards=byId('cards');for(const item of data.candidates){const article=el('article','skill'+(item.accent?' featured':''));const header=el('div','card-head');if(item.badge)header.append(el('span','badge',item.badge));header.append(el('h3','',item.name),el('p','tagline',item.tagline||''));article.append(header);const rows=el('div','rows');for(const row of item.rows){const wrap=el('div','row');const head=el('div','row-head');head.append(el('span','label',row.label));if(row.status)head.append(el('span','status '+(row.kind||'neutral'),row.status));wrap.append(head,el('div','value',row.value));const detail=el('details');detail.append(el('summary','','View evidence'),el('p','evidence',row.evidence));wrap.append(detail);rows.append(wrap)}article.append(rows);if(item.note)article.append(el('p','note',item.note));cards.append(article)}})();
+</script>
+</body>
+</html>

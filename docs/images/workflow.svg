@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">How Skill Lens works</title>
+  <desc id="desc">Discover candidates, compare evidence, select a base, and customize it for your needs.</desc>
+  <rect width="1200" height="260" rx="24" fill="#f6f5fc"/>
+  <text x="50" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.2" fill="#6d59c9">A WORKFLOW FOR CHOOSING SKILLS</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(45 80)"><rect width="245" height="135" rx="16" fill="#fff" stroke="#e5e1f1"/><circle cx="30" cy="31" r="15" fill="#efebff"/><text x="30" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#6d59c9">1</text><text x="20" y="76" font-size="20" font-weight="700" fill="#252638">Discover</text><text x="20" y="101" font-size="14" fill="#666a80">Find relevant skills</text></g>
+    <text x="304" y="155" font-size="25" fill="#a5a0bd">→</text>
+    <g transform="translate(340 80)"><rect width="245" height="135" rx="16" fill="#fff" stroke="#e5e1f1"/><circle cx="30" cy="31" r="15" fill="#efebff"/><text x="30" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#6d59c9">2</text><text x="20" y="76" font-size="20" font-weight="700" fill="#252638">Compare</text><text x="20" y="101" font-size="14" fill="#666a80">Inspect rules and evidence</text></g>
+    <text x="599" y="155" font-size="25" fill="#a5a0bd">→</text>
+    <g transform="translate(635 80)"><rect width="245" height="135" rx="16" fill="#fff" stroke="#e5e1f1"/><circle cx="30" cy="31" r="15" fill="#efebff"/><text x="30" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#6d59c9">3</text><text x="20" y="76" font-size="20" font-weight="700" fill="#252638">Choose</text><text x="20" y="101" font-size="14" fill="#666a80">Match your requirements</text></g>
+    <text x="894" y="155" font-size="25" fill="#a5a0bd">→</text>
+    <g transform="translate(930 80)"><rect width="225" height="135" rx="16" fill="#fff" stroke="#e5e1f1"/><circle cx="30" cy="31" r="15" fill="#efebff"/><text x="30" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#6d59c9">4</text><text x="20" y="76" font-size="20" font-weight="700" fill="#252638">Customize</text><text x="20" y="101" font-size="14" fill="#666a80">Adapt a personal copy</text></g>
+  </g>
+</svg>

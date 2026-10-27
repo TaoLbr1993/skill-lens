@@ -1,0 +1,46 @@
+{
+  "title": "Choosing an academic polishing skill",
+  "subtitle": "Three locally installed skills · Static inspection of selected instructions · 2026-10-27",
+  "requirement": "Make light edits by default, preserve citations, ask before rewriting a paragraph, and explain changes.",
+  "conclusion": "Among the instructions inspected, paper-polish comes closest to a light-editing workflow. academic-humanizer can match an author's voice, while nature-polishing also addresses section structure.",
+  "footer": "This static comparison describes the instructions inspected, not actual polishing performance or a security audit. Supporting files and scripts were not reviewed in full. Actual behavior depends on the user's instructions and environment.",
+  "candidates": [
+    {
+      "name": "paper-polish",
+      "tagline": "Conservative language editing that preserves the author's meaning",
+      "badge": "Consider first · Light edits",
+      "accent": true,
+      "rows": [
+        {"label":"Editing scope","value":"Prefers small edits; asks before structural rewriting","status":"Explicitly supported","kind":"positive","evidence":"SKILL.md lines 90–101: prefers light edits and asks the author to choose before rewriting beyond the sentence level. This does not explicitly cover every paragraph rewrite.\n~/.codex/skills/paper-polish\\SKILL.md:90"},
+        {"label":"Meaning and citations","value":"Does not silently change meaning or add citations","status":"Partially established","kind":"neutral","evidence":"SKILL.md lines 42–81: changes that may affect scientific meaning must be flagged; new citations must not be added. The inspected text did not establish a rule to preserve every existing citation.\n~/.codex/skills/paper-polish\\SKILL.md:42"},
+        {"label":"Revision notes","value":"Explains major changes and flags meaning risks","status":"Major edits","kind":"positive","evidence":"SKILL.md lines 226–239: deliver polished text and concise notes; use before-and-after comparisons for changes that may affect meaning.\n~/.codex/skills/paper-polish\\SKILL.md:226"},
+        {"label":"File handling","value":"Defaults to editing workspace files in place","status":"Consider carefully","kind":"caution","evidence":"SKILL.md lines 201–207: edit workspace LaTeX or Markdown files directly and use the version diff as a record. Actual operations remain subject to the user's instructions.\n~/.codex/skills/paper-polish\\SKILL.md:201"}
+      ],
+      "note":"Suitable for conservative language editing; explicitly request a preview first if needed."
+    },
+    {
+      "name": "academic-humanizer",
+      "tagline": "Remove formulaic AI phrasing and match the author's voice",
+      "badge": "Focus · Author voice",
+      "rows": [
+        {"label":"Editing scope","value":"Preserves structure and content while calibrating claims","status":"Structure specified","kind":"positive","evidence":"SKILL.md lines 36–46: audit before rewriting, preserve structure, content, and citations, and calibrate overclaims.\n~/.codex/skills/academic-humanizer\\SKILL.md:36"},
+        {"label":"Meaning and citations","value":"Preserves citations, though an example creates tension","status":"Needs clarification","kind":"caution","evidence":"Line 154 prohibits dropping or changing citations; lines 114–118 suggest retaining only the most relevant references in a citation-dumping example. This is a potential tension, not evidence of a runtime failure.\n~/.codex/skills/academic-humanizer\\SKILL.md:114\n~/.codex/skills/academic-humanizer\\SKILL.md:154"},
+        {"label":"Revision notes","value":"Provides a short change log and voice notes","status":"Brief notes","kind":"positive","evidence":"SKILL.md lines 36–46 and 259–261: return cleaned text and a short report on writing patterns, claim changes, and voice.\n~/.codex/skills/academic-humanizer\\SKILL.md:36"},
+        {"label":"Voice matching","value":"Can use the author's supplied writing samples","status":"Distinctive capability","kind":"neutral","evidence":"SKILL.md lines 177–181: use supplied prior papers to observe sentence rhythm, connectives, and phrasing.\n~/.codex/skills/academic-humanizer\\SKILL.md:177"}
+      ],
+      "note":"Useful for author voice and AI-like phrasing; clarify the citation rule if preserving every reference is essential."
+    },
+    {
+      "name": "nature-polishing",
+      "tagline": "Routes polishing by paper type, section, language, and journal",
+      "badge": "Focus · Structure and sections",
+      "rows": [
+        {"label":"Editing scope","value":"Can diagnose and adjust section or paragraph logic","status":"Potentially deeper","kind":"caution","evidence":"SKILL.md lines 39–53: load rules by paper type and section before addressing logic and sentences. The output guide requires disclosure when section logic changes.\n~/.codex/skills/nature-polishing\\SKILL.md:39\n~/.codex/skills/nature-polishing\\static\\core\\output-format.md:3"},
+        {"label":"Meaning and citations","value":"Preserves facts, evidence boundaries, and citation intent","status":"Per-citation rule unknown","kind":"caution","evidence":"The SKILL.md description requires preserving facts, evidence boundaries, and citation intent. The inspected materials did not establish a rule to preserve each existing citation key.\n~/.codex/skills/nature-polishing\\SKILL.md:3"},
+        {"label":"Revision notes","value":"Provides 3–5 notes; side-by-side on request","status":"Can be detailed","kind":"positive","evidence":"static/core/output-format.md: return polished text and 3–5 notes; provide original, polished, and rationale when requested.\n~/.codex/skills/nature-polishing\\static\\core\\output-format.md:1"},
+        {"label":"Supporting files","value":"Loads section rules and shared resources as needed","status":"Dependencies matter","kind":"neutral","evidence":"SKILL.md and manifest.yaml route by paper type, section, language, and journal and reference neighboring nature-shared resources.\n~/.codex/skills/nature-polishing\\SKILL.md:19\n~/.codex/skills/nature-polishing\\manifest.yaml:6"}
+      ],
+      "note":"Useful for section-level diagnosis and journal style; state editing limits explicitly for a light-edit request."
+    }
+  ]
+}
